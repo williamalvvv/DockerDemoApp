@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 3000
+var os = require("os");
+var hostname = os.hostname()
 
 const MongoClient = require('mongodb').MongoClient
 
@@ -13,7 +15,7 @@ app.get('/', (req, res) => {
       res.status(500).send('Oooops algo ha salido mal  ): ' + err);
     } else {
       res.send('Conexion a la base de datos exitosa');
-      res.send(`container id ${port}`);
+      res.send('container id' + hostname);
       db.close();
     }
   });
