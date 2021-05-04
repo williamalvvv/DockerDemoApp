@@ -17,5 +17,10 @@ services:
     volumes:
       - mongodata:/data/db
 
+  lb:
+    build:
+      context: .
+      dockerfile: nginxDockerfile
+
 volumes: 
     mongodata:
