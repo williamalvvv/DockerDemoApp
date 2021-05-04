@@ -12,3 +12,4 @@ services:
 
   db:
     image: mongo
+    mongodata:/data/db
