@@ -10,12 +10,12 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/test';
 app.get('/', (req, res) => {
   MongoClient.connect(mongoUrl, { useNewUrlParser: true }, (err, db) => {
     if (err) {
-      res.status(500).send('💥 BOOM 💥: ' + err);
+      res.status(500).send('Oooops algo ha salido mal  ): ' + err);
     } else {
-      res.send('Me conecté a la DB! 😎');
+      res.send('Conexion a la base de datos exitosa');
       db.close();
     }
   });
 });
 
-app.listen(port, () => console.log(`Server listening on port ${port}!`))
+app.listen(port, () => console.log(`Servidor Activo y escuchando en el puerto: ${port}!`))
