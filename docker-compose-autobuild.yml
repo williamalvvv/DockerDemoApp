@@ -21,6 +21,8 @@ services:
     build:
       context: .
       dockerfile: nginxDockerfile
+    ports: 
+      - "8080:80"
 
 volumes: 
     mongodata:
