@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     if (err) {
       res.status(500).send('Oooops algo ha salido mal  ): ' + err);
     } else {
-      res.send('Conexion a la base de datos exitosa');
+      res.send('Conexion a la base de datos exitosa from ' + hostname);
       db.close();
     }
   });
